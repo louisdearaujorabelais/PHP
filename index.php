@@ -12,7 +12,7 @@
         $s = 0;
         echo"<table border='1'>";
         for ($x = 0; $x <= 10; $x++) {
-            $s = echo $j ["txtName"] * $x;
+            $s = echo $j "[txtName]" * $x;
             echo "
                 <tr>
                     <td>
