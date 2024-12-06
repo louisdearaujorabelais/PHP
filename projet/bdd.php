@@ -4,7 +4,7 @@
 
 try {
 
-  $dns = 'mysql:host=localhost;dbname=agent'; // dbname : nom de la base
+  $dns = 'mysql:host=localhost;dbname=registre_livre'; // dbname : nom de la base
 
   $utilisateur = 'root'; // root sur vos postes
 
