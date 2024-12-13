@@ -1,22 +1,30 @@
+<?php
+session_start();
+?>            
+          
+          <?php
+          if(isset($_POST['btnconnexion'])){  
+            $_SESSION["utilisateur"] = ;                 
+            require_once('bdd.php');
+            $mel = $_POST['mel'];
+            $mot_de_passe = $_POST['mot_de_passe'];
+            $stmt = $connexion->prepare("SELECT * FROM utilisateur where mel=:mel and motdepasse=:motdepasse");
+            $stmt->bindValue(":mel", $mel); 
+            $stmt->bindValue(":mot_de_passe", $mot_de_passe);
+            $stmt->setFetchMode(PDO::FETCH_OBJ);        
+            $stmt->execute();
+            $enregistrement = $stmt->fetch();
+            if ($enregistrement) { 
+              echo '<h1>Connexion réussie !</h1>';
+            } else {     
+              echo "Echec à la connexion.";      
+            }
+          }          
+          ?>
+          
 
-            <form action="formulaire2.php"method="POST">
-                <div class="form-floating mb-3 mt-3">
-                  <input type="text" class="form-control" id="nomUti" placeholder="Entrer votre nom d'utilisateur" name="btnEnvoyer">
-                  <label for="nUtilisateur">Nom Utilisateur</label>
-                </div>
+      
+                    
+                    
+                    
 
-                <div class="form-floating mt-3 mb-3">
-                  <input type="text" class="form-control" id="mdp" placeholder="Entrer le mot de passe" name="btnEnvoyer">
-                  <label for="Mdp">Mot de passe</label>
-                </div>
-
-                <div class="form-floating mt-3 mb-3">
-                  <input type="submit" class="form-control" id="co" name="btnEnvoyer">
-                  <label for="co">Connexion</label>
-                </div>
-            </form>
-            <?php
-            if(isset($_POST['btnEnvoyer'])){  
-               
-            }      
-            ?>

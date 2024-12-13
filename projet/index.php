@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Page d'acceuil</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    </head>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    
+    </head>
     <body>
            
     <div class="container-fluid">
@@ -17,8 +18,8 @@
                 </div>
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <div class="container-fluid">
-                        <form class="d-flex">
-                        <input class="form-control me-5" type="text" placeholder="Recherche dans le catalogue (saisie du nom de l'auteur)">
+                        <form class="d-flex" method="POST" action="indexrecherche.php"> 
+                        <input class="form-control me-5" type="text" placeholder="Recherche dans le catalogue (saisie du nom de l'auteur)" >
                         <span class="navbar-text"></span>
                         <button class="btn btn-primary" type="button" name="btnPanier">Panier</button>
                     </div>
@@ -64,9 +65,23 @@
                 </div>
 			</div>
 			<div class="col-sm-3">
-					<?php
+                <form action="formulaire2.php"method="POST">
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="nomUti" name="mel" placeholder="Entrer votre nom d'utilisateur">
+                        <label>Nom Utilisateur</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="password" class="form-control" id="mdp" name="mot_de_passe" placeholder="Entrer le mot de passe">
+                        <label for="Mdp">Mot de passe</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="submit" class="form-control" id="co" name="btnconnexion">
+                        <label for="co">Connexion</label>
+                    </div>
+                </form>
+				<?php
                     require_once("formulaire2.php");
-                    ?>
+                ?>
 			</div>
 		</div>
 	</div>

@@ -30,7 +30,7 @@
 		</div>
         <div class="row">
 		    <div class="col-sm-9">
-                
+                <!--carroussel / résultat de la recherche / pages d'admin (ajout d'un livre)-->
             </div>
 			<div class="col-sm-3">
 					<?php
