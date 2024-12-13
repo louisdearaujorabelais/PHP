@@ -15,13 +15,12 @@
                 <div class="alert alert-success">
                     La bibliothèque de Moulinsart est fermer au public jusqu'a nouvelle ordre. Mais il vous est possible de réserver et de retirer vos livres via notre service Biblio-drive !
                 </div>
-                <p></p>
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <div class="container-fluid">
                         <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Recherche dans le catalog (saisie du nom de l'auteur)">
+                        <input class="form-control me-5" type="text" placeholder="Recherche dans le catalogue (saisie du nom de l'auteur)">
                         <span class="navbar-text"></span>
-                        <button class="btn btn-primary" type="button" name="btnEnvoyer">Panier</button>
+                        <button class="btn btn-primary" type="button" name="btnPanier">Panier</button>
                     </div>
                 </nav>
 			</div>
@@ -36,22 +35,22 @@
                 <div id="demo" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" style="width:20%"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" style="width:20%"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="1984.jpg" alt="1984" class="d-block mx-auto" style="width:20%">
+                            <img src="1984.jpg" alt="1984" class="d-block mx-auto" style="width:25%">
                             <div class="carousel-caption">
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="Anna_Karenine.jpg" alt="Anna Karenine" class="d-block mx-auto" style="width:20%">
+                                <img src="Anna_Karenine.jpg" alt="Anna Karenine" class="d-block mx-auto" style="width:25%">
                                 <div class="carousel-caption">
                                 </div> 
                             </div>
-                        <div class="carousel-item">
-                            <img src="Bartleby_le_Scribe.jpg" alt="Bartleby le Scribe" class="d-block mx-auto" style="width:20%">
+                        <div class="carousel-item"> 
+                            <img src="Bartleby_le_Scribe.jpg" alt="Bartleby le Scribe" class="d-block mx-auto" style="width:25%">
                             <div class="carousel-caption">
                             </div>  
                         </div>
