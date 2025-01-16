@@ -34,18 +34,18 @@ session_start();
                         if (!isset($_POST['btnAjoutlivre'])) { 
                             // Le formulaire n'a pas été soumis
                             echo '
-                            <form method="POST" name="auteur">
-                            <select>';
-                            require_once('bdd.php');
-                            $raut = $connexion->prepare("SELECT * FROM auteur ORDER BY nom asc");                    
-                            $raut->setFetchMode(PDO::FETCH_OBJ);                                                     
-                            $raut->execute();                                                           
-                            while($enregistrement = $raut->fetch())     
-                            {
-                            ?>   
-                                <h6><option method="POST" name = "auteur" value=<?=$enregistrement->noauteur?>><?=$enregistrement->nom?></option>
-                            <?php
-                            }
+                            <form method="GET" name="auteur">
+                                <select>';
+                                require_once('bdd.php');
+                                $raut = $connexion->prepare("SELECT * FROM auteur ORDER BY nom asc");                    
+                                $raut->setFetchMode(PDO::FETCH_OBJ);                                                     
+                                $raut->execute();                                                           
+                                while($enregistrement = $raut->fetch())     
+                                {
+                                ?>   
+                                    <h6><option method ="GET" name = "qauteur" value=<?=$enregistrement->noauteur?>><?=$enregistrement->nom?></option>
+                                <?php
+                                }
                             echo
                             '</select>
                             </form>
@@ -60,7 +60,7 @@ session_start();
                                 </div>
                                 <div class="form-floating mt-3 mb-3">
                                     <input type="text" class="form-control"  name="anneeparution" placeholder="Entrer l année de parution">
-                                    <label>anneeparution</label>
+                                    <label>année parution</label>
                                 </div>
                                 <div class="form-floating mt-3 mb-3">
                                     <input type="text" class="form-control"  name="detail" placeholder="Entrer le nom de l auteur">
@@ -75,7 +75,8 @@ session_start();
                                 </div>
                             </form>';
                         } else { 
-                            echo  $_POST["auteur"];
+                            echo  $_GET["auteur"];
+                            echo  $_GET["qauteur"];
                             if (!empty($_POST['titre']) && !empty($_POST['isbn13']) && !empty($_POST['anneeparution']) && !empty($_POST['detail']) && !empty($_POST['photo']) && !empty($_POST['auteur'])){ 
                                 echo $_POST['auteur'];                       
                                 require_once 'bdd.php';   
